@@ -1,0 +1,407 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: 'Open Sans', Arial, sans-serif;
+    background: #fafafa;
+}
+
+#email-views {
+    width: 100%;
+}
+
+textarea {
+    min-height: 400px;
+}
+
+.email {
+    border: 1px solid black;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 100%;
+    padding: 3px;
+    min-height: 40px;
+    display: flex;  
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.sender_list {
+    font-weight: bold;
+    float: left;
+    width: 35%;
+    overflow: hidden;
+}
+
+.subject_list {
+    width: 45%;
+    overflow: hidden;
+}
+
+.time_list, .sent_time_list {
+    float: left;
+    width: 20%;
+    text-align: right;
+}
+
+.archive_div {
+    display: none;
+    float: right;
+    width: 20%;
+    background: inherit;
+    margin: auto;
+}
+
+.archive_button {
+    float: right;
+    display: block;
+}
+
+.email:hover .archive_div {
+    display: inline-block;
+}
+
+.email:hover .time_list {
+    display: none;
+}
+
+.read {
+    background-color: rgb(230, 230, 230)
+}
+
+.unread {
+    background-color: ghostwhite;
+}
+
+.email p {
+    display: inline-block;
+    font-size: 13px;
+    margin: 0;
+}
+
+#email {
+    padding: 10px 30px 30px 30px;
+}
+
+#email_subject {
+    margin-bottom: 20px;
+}
+
+#email_receiver, #email_sender, #email_timestamp {
+    margin-bottom: 5px;
+}
+
+#email_body {
+    margin: 30px 0;
+}
+
+.profile {
+    padding: 5px;
+}
+
+.profile p, .profile i {
+    display: block;
+    text-align: center;
+    margin: 5px 0;
+}
+
+#error_message {
+    background-color: #FFCCCC;
+    margin-top: -11px;
+    margin-bottom: 16px;
+}
+
+.container h2 {
+    margin-top: 40px;
+}
+
+.container a {
+    text-decoration: underline;
+    color: purple;
+}
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+i, span {
+    display: inline-block;
+}
+
+.wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: rgb(230, 230, 230);
+    color: black;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+#sidebar.active {
+    min-width: 80px;
+    max-width: 80px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#sidebar.active .sidebar-header h3 {
+    display: none;
+}
+
+#sidebar.active .sidebar-header strong {
+    display: block;
+    font-size: x-large;
+}
+
+#sidebar.active .sidebar-header {
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    text-align: left;
+}
+
+#sidebar.active ul li a {
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 0.85em;
+}
+
+#sidebar.active ul li a i {
+    margin-right: 0;
+    display: block;
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+#sidebar.active ul ul a {
+    padding: 10px !important;
+}
+
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: rgb(236, 240, 241);
+}
+
+#sidebar .sidebar-header strong {
+    display: none;
+    font-size: 1.8em;
+}
+
+#sidebar .sidebar-header {
+    position: sticky;
+    top: 0;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+    border-top: 1px solid #47748b;
+    position: sticky;
+    top: 96px;
+}
+
+#sidebar.active ul.components {
+    top: 56px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    color: #7386D5;
+    background: #fff;
+    cursor: pointer;
+}
+
+#sidebar ul li a i {
+    margin-right: 10px;
+}
+
+#sidebar ul li.active>a, a[aria-expanded="true"] {
+    color: #fff;
+    background: #6d7fcc;
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    color: black !important;
+}
+
+ul ul a:hover {
+    color: #7386D5 !important;
+    background: #fff !important;
+    cursor: pointer !important;
+}
+
+#sidebarCollapse {
+    display: none;
+}
+
+#content {
+    width: 100%;
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+
+@media only screen and (max-width: 768px) {
+ 
+    /* .form_inline {
+        width: 80%;
+    } */
+
+    #sidebar {
+        min-width: 80px;
+        max-width: 80px;
+        text-align: center;
+        margin-left: -80px !important;
+    }
+
+    #sidebar.active {
+        margin-left: 0 !important;
+    }
+
+    #sidebar .sidebar-header h3 {
+        display: none;
+    }
+
+    #sidebar .sidebar-header strong {
+        display: block;
+    }
+
+    #sidebar ul li a {
+        padding: 20px 0px;
+    }
+
+    #sidebar ul li a i {
+        margin-right: 0;
+        display: block;
+    }
+
+    #sidebar ul ul a {
+        padding: 10px !important;
+    }
+
+    #sidebar ul li a i {
+        font-size: 1.3em;
+    }
+
+    #sidebar {
+        margin-left: 0;
+    }
+
+    #sidebarCollapse  {
+        display: block;
+    }
+}
+
+@media (max-width: 992px) {
+    
+    #logout {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    ul ul a {
+        padding: 0 !important;
+    }
+
+    #drop_menu {
+        display: none;
+    }
+
+    .dropdown-toggle {
+        display: none;
+    }
+
+    .dropdown-menu {
+        display: block;
+        position: relative;
+        border-width: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+    .dropdown-item {
+        padding: .5rem 0rem;
+        color: rgba(0,0,0,.5);
+    }
+
+    .email {
+        display: grid;
+        grid-template-columns: 4fr, 1fr;
+    }
+
+    .sender_list, .time_list, .sent_time_list, .subject_list{
+        width: 100%;
+        grid-column: 1;
+    }
+
+    
+    .time_list, .sent_time_list {
+        text-align: left;
+    }
+
+    .email:hover .archive_div {
+        width: 100%;
+        height: 100%;
+        grid-column: 2;
+        grid-row: 1 / span 3;
+    }
+
+    .archive_button {
+        height: 100%;
+    }
+
+    .email:hover .time_list {
+        display: inline-block;
+    }
+}
